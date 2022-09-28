@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='EmpDatabase_layout.css') }}">
+        <!--<link rel= "stylesheet" type= "text/css" href="/static/EmpDatabase_layout.css"> -->
+<!--         <link href="EmpDatabase_layout.css" rel="stylesheet"> -->
+<!--         <link href="home_page.png" rel="icon"> -->
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="home">Employee Management System</a>
+
+            <form action="/" autocomplete="on" method = "GET">
+                <button type="submit">HOME</button>
+            </form>
+            <form action="/getemp" autocomplete="on" method = "GET">
+                <button type="submit">EMPLOYEE INFORMATION</button>
+            </form>
+            <form action="/toattendance" autocomplete="on" method = "POST">
+                <button type="submit">ATTENDANCE</button>
+            </form>
+            <form action="/topayroll" autocomplete="on" method = "POST">
+                <button type="submit">PAYROLL</button>
+            </form>
+            <form action="/tomanageemp" autocomplete="on" method = "POST">
+                <button type="submit">MANAGE EMPLOYEE</button>
+            </form>
+        </div>
+
+    <center>
+        <div bgcolor="lightgrey" ><br><br><br>
+            <h1>MEtube Employee Management System</h1>
+
+        </div>
+
+
+<!--         <img src= "home_page.png" style="width: 100px"> -->
+
+
+        <div class="float-container" style="padding: 20px; width: 100%;">
+            <div class="float-child" style="width: 100%; float: left; padding: 20px;">
+                <p style="font-style: bold; font-weight: bold; font-size: xx-large; width:100%; font-family: Tahoma, sans-serif;">Our employee management system</p><br>
+                <p style="font-style: normal; font-size: larger; width:100%; font-family: Tahoma, sans-serif;">Helps employees to give their best efforts every day to achieve the goals of the organization</p>
+            </div>
+            <div class="float-child" style="width: 100%; float: left; padding: 20px;">
+                <p style="font-style: bold; font-weight: bold; font-size: xx-large; width: 100%; font-family: Tahoma, sans-serif;">Happy Workforce</p><br>
+                <p style="font-style: normal; font-size: larger; font-family: Tahoma, sans-serif;">Can keep your employees happy and create a happy workforce.
+                    A good work culture environment and a culture is a need of your employees. </p>
+            </div>
+        </div>
+    </center>
+
+
+</body>
+
+</html>
+

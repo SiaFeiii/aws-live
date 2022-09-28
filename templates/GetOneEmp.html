@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Searched Employee Information</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='EmpDatabase_layout.css') }}">
+	<!-- <link rel= "stylesheet" type= "text/css" href="/static/EmpDatabase_layout.css"> -->
+</head>
+
+<body>
+	<div class="topnav">
+		<a class="home">Employee Management System</a>
+
+		<form action="/" autocomplete="on" method = "GET">
+			<button type="submit">HOME</button>
+		</form>
+		<form action="/getemp" autocomplete="on" method = "GET">
+			<button type="submit">EMPLOYEE INFORMATION</button>
+		</form>
+		<form action="/toattendance" autocomplete="on" method = "POST">
+			<button type="submit">ATTENDANCE</button>
+		</form>
+		<form action="/topayroll" autocomplete="on" method = "POST">
+			<button type="submit">PAYROLL</button>
+		</form>
+		<form action="/tomanageemp" autocomplete="on" method = "POST">
+			<button type="submit">MANAGE EMPLOYEE</button>
+		</form>
+	</div>
+	
+	<center>
+		<br><br><br>
+		<h1>Employee Information</h1><br><br><br>
+		<body bgcolor="lightgrey">
+			<form>
+				{% for item in data %}
+				<p>Employee ID:<br> {{ item[0] }} </p><br>
+				<p>First Name:<br> {{ item[1] }} </p><br>
+				<p>Last Name:<br> {{ item[2] }} </p><br>
+				<p>Primary Interest:<br> {{ item[3] }} </p><br>
+				<p>Location:<br> {{ item[4] }} </p><br>
+				<!-- <p>Image URL: <br> {{ image_url }} </p><br> -->
+				{% endfor %}
+
+				{% for image in contents %}
+				<img src= {{ image }} style="width: 250px"><br>
+				{% endfor %}
+			</form>
+		</body>
+	</center>
+</body>
+
+</html>

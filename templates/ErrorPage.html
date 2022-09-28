@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error</title>
+	<!-- <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='EmpDatabase_layout.css') }}"> -->
+	<link rel= "stylesheet" type= "text/css" href="/static/EmpDatabase_layout.css">
+</head>
+<body>
+	<div class="topnav">
+		<a class="home">Employee Management System</a>
+		
+		<form action="/" autocomplete="on" method = "GET">
+			<button type="submit">HOME</button>
+		</form>
+		<form action="/getemp" autocomplete="on" method = "GET">
+			<button type="submit">EMPLOYEE INFORMATION</button>
+		</form>
+		<form action="/toattendance" autocomplete="on" method = "POST">
+			<button type="submit">ATTENDANCE</button>
+		</form>
+		<form action="/topayroll" autocomplete="on" method = "POST">
+			<button type="submit">PAYROLL</button>
+		</form>
+		<form action="/tomanageemp" autocomplete="on" method = "POST">
+			<button type="submit">MANAGE EMPLOYEE</button>
+		</form>
+	</div>
+
+	<center>
+		<div bgcolor="lightgrey"><br><br><br>
+			<h2>{{ errorMsg }}</h2><br><br><br>
+			<br><br><br>
+		</div>
+	</center>
+	<form action='{{ action }}' autocomplete="on" method = "POST">
+		<button type="submit">{{ buttonMsg }}</button>
+	</form>
+	
+</body>
+</head>
+</html>
